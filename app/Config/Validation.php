@@ -42,6 +42,7 @@ class Validation extends BaseConfig
     // Rules of Categories
     // --------------------------------------------------------------------
     public $category = [
+        'id' => 'permit_empty|is_natural_no_zero',
         'name' => 'trim|required|min_length[3]|max_length[90]|is_unique[categories.name,id,{id}]',
     ];
 
